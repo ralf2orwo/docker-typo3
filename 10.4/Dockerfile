@@ -58,6 +58,7 @@ RUN cd /var/www/html && \
     ln -s typo3_src/index.php && \
     ln -s typo3_src/typo3 && \
     cp typo3/sysext/install/Resources/Private/FolderStructureTemplateFiles/root-htaccess .htaccess && \
+    sed -i '1 i\SetEnv TYPO3_CONTEXT=Development' .htaccess \
     mkdir typo3temp && \
     mkdir typo3conf && \
     mkdir fileadmin && \
